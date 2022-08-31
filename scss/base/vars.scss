@@ -1,0 +1,22 @@
+$DefaulWhite1: #E4E4E4;
+$DeaultWhite2: #FFFFFF;
+$OrangeColor: #E2A300;
+$BlackColor: #2A2A2A;
+$BlueColor: #00c1ec;
+$DarkGradientBack: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
+$GreyGradient: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+
+
+%TypeTitle {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54.4 / 28 * 100%;
+    color: $DefaulWhite1;
+}
+
+%TypeText {
+    font-size: 18px;
+    line-height: 21.38 / 18 * 100%;
+    
+}

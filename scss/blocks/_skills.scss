@@ -1,0 +1,88 @@
+.page {
+    &__skills {
+        padding: 103px 0px 156px 0px;
+    }
+    @media (max-width: 1024px) {
+        &__skills {
+            padding: 83px 0px 136px 0px;
+        }  
+    }
+    @media (max-width: 996px) {
+        &__skills {
+            padding: 63px 0px 116px 0px;
+        }  
+    }
+    @media (max-width: 1024px) {
+        &__skills {
+            padding: 40px 0px 90px 0px;
+        }  
+    }
+}
+.skills {
+    background: $GreyGradient;
+    // .skills__conteiner
+
+    // .skills__body
+
+    &__body {
+
+    }
+
+    // .skills__row
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    // .skills__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 270px;
+        min-height: 270px;
+        background-color: $BlackColor;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+        border-radius: 29px;  
+        padding: 50px 60px 50px 60px;  
+        flex: 0 1 33.3%;
+        margin: 30px 30px 0px 0px;
+        
+        
+        transform: translate(-90px, 0px);
+        opacity: 0;
+        transition: all .5s ease;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+        &:hover{
+            background-color: $OrangeColor;
+            box-shadow: 0px 3px 15px 10px rgba(255,255,255,0.75);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+    }
+
+    // .skills__image
+
+    &__image {  
+        
+    }
+
+    // .skills__title-name
+
+    &__title-name {
+        font-size: 24px;
+        line-height: 28.51 / 24 *100%;
+        text-align: center;
+        
+    }
+    
+}

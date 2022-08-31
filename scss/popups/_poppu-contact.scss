@@ -1,0 +1,133 @@
+.popup-contact {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.396);
+    z-index: 60;
+    transition: all .5s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(0deg);
+        .popup-contact__content {
+            transform: translate(0px, 0px) scale(1) rotate(0deg);
+        }
+        .popup-contact__text,
+        .popup-contact__title,
+        .popup-contact__list {
+            transform: translate(0px, 0px);
+        }
+    }
+    
+    // .popup__body
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 10px;
+    }
+
+    // .popup__content
+
+    &__content {
+        background: #c49a31;
+        background: linear-gradient(140deg, $OrangeColor 50%, $BlueColor 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $DefaulWhite1;
+        max-width: 800px;
+        padding: 30px;
+        position: relative;
+        border-radius: 20px;
+        transition: all .5s ease;
+        transform: translate(0px, 400px) scale(0) rotate(30deg);
+        font-family: 'Open+Sans', sans-serif;
+        & > *:not(:last-child){
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    // .popup__close
+
+    &__close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 5px;
+        font-size: 28px;
+        &:hover {
+            color: red;
+        }
+    }
+
+    // .popup__title
+
+    &__title {
+        @extend %TypeTitle;
+        font-size: 30px;
+        font-weight: 700;
+        
+        transition: all .5s ease .5s;
+        transform: translate(0px, -100px);
+    }
+
+
+		// .popup__text
+
+		&__text {
+            font-size: 20px;
+            max-width: 400px;
+
+            transition: all .5s ease 1s;
+            transform: translate(0px, 100px);
+
+            & span {
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: rgb(164, 73, 73);
+                font-weight: 600;
+            }
+		}
+
+		// .popup__list
+
+		&__list {
+            & > *:not(:last-child){
+                margin: 0px 0px 13px 0px;
+            }
+            transition: all .5s ease 1.5s;
+            
+            transform: translate(100px, 0px);
+		}
+
+		// .popup__item
+
+		&__item {
+
+		}
+
+		// .popup__link
+
+		&__link {
+            font-weight: 600;
+            font-display: 25px;
+            text-transform: uppercase;
+            &:hover, 
+            &:active {
+                letter-spacing: 5px;
+                color: rgb(164, 73, 73);
+            }
+		}
+
+
+}
